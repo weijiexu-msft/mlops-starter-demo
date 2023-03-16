@@ -1,0 +1,10 @@
+scikit-learn
+pandas
+ipykernel
+matplotlib
+
+
+black
+flake8
+pytest
+pre-commit

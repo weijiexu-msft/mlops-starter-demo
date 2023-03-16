@@ -1,0 +1,36 @@
+{
+	"name": "Miniconda (Python 3)",
+	"build": {
+		"context": "..",
+		"dockerfile": "Dockerfile",
+	},
+
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.profiles.linux": {
+					"bash": {
+						"path": "/bin/bash"
+					}
+				},
+				"[python]": {
+					"editor.defaultFormatter": "ms-python.black-formatter",
+					"editor.formatOnSave": true,
+					"editor.codeActionsOnSave": {
+						"source.organizeImports": true
+					},
+				  },
+				"isort.args":[
+					"--profile", "black"
+				],
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"ms-toolsai.vscode-ai",
+				"ms-python.black-formatter",
+				"ms-python.isort"
+			]
+		}
+	}
+}
